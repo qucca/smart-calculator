@@ -1,26 +1,34 @@
 class SmartCalculator {
   constructor(initialValue) {
-    // your implementation
+    this.sum = initialValue;
   }
 
   add(number) {
-    // your implementation
+    this.sum += '+' + number;
+    return this;
   }
   
   subtract(number) {
-    // your implementation
+    this.sum += '-' + number;
+    return this;
   }
 
   multiply(number) {
-    // your implementation
+    this.sum += '*' + number;
+    return this;
   }
 
   devide(number) {
-    // your implementation
+    this.sum += '/' + number;
+    return this;  
   }
 
   pow(number) {
-    // your implementation
+    this.sum += '**' + number;
+    return this;
+  }
+  valueOf() {
+    return eval(this.sum);
   }
 }
 
